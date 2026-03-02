@@ -1,7 +1,7 @@
 using { com.logaligroup as entities } from '../db/schema';
 using {API_BUSINESS_PARTNER as bp} from './external/API_BUSINESS_PARTNER';
 
-service Header {
+service Sales_order {
     type form {
         foption : String(10);
         famount : Integer;
@@ -13,22 +13,6 @@ service Header {
 
     entity Inventories      as projection on entities.Inventories
         actions {
-     /*       @Core.OperationAvailable: {
-                $edmJson: {
-                    $If: [
-                        {
-                            $Eq: [
-                                {
-                                    $Path: 'in/Header/IsActiveEntity'
-                                },
-                                true
-                            ]
-                        },
-                        true,
-                        false
-                    ]
-                }
-            } */
             @Common : { 
                 SideEffects : {
                     $Type : 'Common.SideEffectsType',

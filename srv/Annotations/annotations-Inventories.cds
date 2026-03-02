@@ -1,4 +1,4 @@
-using {Header as service} from '../service';
+using {Sales_order as service} from '../service';
 
 annotate service.Inventories with {
     stockNumber  @title: 'Stock Number'      @Common.FieldControl: #ReadOnly;

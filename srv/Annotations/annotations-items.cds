@@ -1,4 +1,4 @@
-using {Header as service} from '../service';
+using {Sales_order as service} from '../service';
 
 // 1. Definición de títulos y etiquetas de unidades
 annotate service.Items with {
